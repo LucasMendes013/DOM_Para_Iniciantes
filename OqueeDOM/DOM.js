@@ -5,5 +5,10 @@ console.log(classSelecionado)          //Exibi no console tudo o que envolve a c
 const bodySelecionado = document.querySelector('body')  //Peguei a tag body
 console.log(bodySelecionado)    //Exibi no console a tag body da minha página
 
-const idSelecionado = document.querySelector('#h2')    //Peguei o id usando '#h2'
-console.log(idSelecionado)
+classSelecionado.addEventListener('click', function(){
+  console.log('clicou em', classSelecionado.innerText)  //Retorna o texto que existe dentro da class '.h1'
+})  
+
+const classeAtivo = document.querySelector('.ativo')
+console.log(classeAtivo)
+
