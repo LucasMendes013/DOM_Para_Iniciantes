@@ -108,3 +108,77 @@ gridSection.forEach(function(gridItem,index, array) {
 
 const imagens = document.querySelectorAll('img')
 console.log(imagens)
+
+
+
+
+
+//forEach
+//Constantemente vamos selecionar uma lista de itens do dom. A melhor forma para interagirmos com os mesmos é utilizando o método forEach
+const imgs = document.querySelectorAll('img')
+imgs.forEach(function(item) {
+  console.log(item)
+})
+
+//Parâmetros no forEach.
+//O primeiro parâmetro é o callback, ou seja, a função que será ativada a cada item. Esse tipo de função pode receber três parâmetros: valorAtual, index e array
+const imgs = document.querySelectorAll('img')
+
+imgs.forEach(function(valorAtual, index, array) {
+  console.log(item) //o item atual do loop
+  console.log(index)//o número do index
+  console.log(array)//a Array completa
+})
+
+//forEach e Array
+//forEach é um método de Array, alguns objetos array-like possuem este método. Caso não possua, o ideal é tranforma-lo em uma array.
+//Abaixo estou transformando uma HTMLCollection em uma Nodelista(array)
+const titulos = document.getElementsByClassName('titulo')
+const titulosArray = Array.from(titulos)
+
+titulosArray.forEach(function(item) {
+  console.log(item)
+})
+
+
+//Arrow Function 
+//Sintaxe curta em relação a function. Basta remover a palavra function e adicionar a fat arrow => após os argumentos
+const imgs  = documents.querySelectorAll('img')
+imgs.forEach((item)=> {
+  console.log(item)
+})
+
+//Classlist
+//Retorna uma lista com as classes do elemento. Permite adicionar, remover e verificar se contém
+const menu = document.querySelector('.menu')
+
+menu.className  //string
+menu.classList  //lista de classes
+menu.classList.add('ativo')
+menu.classList.add('ativo', 'mobile') //duas classes
+menu.classList.remove('ativo')  
+menu.classList.toggle('ativo')  //adiciona/remove a classe
+menu.classList.contains('ativo') //true ou false
+menu.classList.replace('ativo', 'inativo')
+
+//getAttribute e setAttibute
+//Métodos que retornam ou definem de acordo com o atributo selecionado
+const img = document.querySelector('img')
+
+img.getAttribute('src') //valor do src
+img.setAttribute('alt', 'Texto Alternativo') //muda o alt
+img.hasAttribute('id') //true  / false
+img.removeAttribute('alt')  //remove o alt
+
+img.hasAttribute() //true / false se tem algum atributo
+
+
+//Read Only vs Writable
+//Existem propriedades que não permitem a mudança de seus valores, essas são consideradas Read Only, ou seja, apenas leitura
+const animais = document.querySelector('.animais')
+
+animais.className //string com o nome das classes
+animais.className = 'azul'  //substitui completamente a string
+animais.classList += 'vermelho' //adiciona vermelho à string
+
+animais.attributes = 'class="ativo' //não funciona, read-only
