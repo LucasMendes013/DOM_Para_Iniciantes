@@ -48,3 +48,38 @@ const linguagemNavegador = window.navigator.language
 
 //Retorne a largura da janela
 
+
+//ID
+//getElementById seleciona e retorna elementos do DOM
+//Seleciona pelo ID
+const animaisSection = document.getElementById('animais')
+const contatoSection = document.getElementById('contato')
+
+//Retorna null caso não exista
+const naoExiste = document.getElementById('teste')
+
+//CLASSE E TAG
+//getElementByClassName e getElementByTagName selecionam e retornam uma lista de elementos do DOM. A lista retornada está ao vivo, significa que se elementos forem adicionados, ela será automaticamente atualizada.
+
+//Seleciona pela classe, retorna uma HTMLCollection 
+const gridSection = document.getElementsByClassName('grid-section')
+const contato = document.getElementsByClassName('grid-section contato')
+
+//Seleciona todas as UL's, retorna uma HTMLCollection
+const ul = document.getElementsByTagName('ul')
+
+//Retorna o primeiro elemento
+console.log(gridSection[0])
+
+
+//Seletor Geral Único
+// querySelector retorna o primeiro elemento que combinar com o seu seletor css
+const animais = document.querySelector('.animais')
+const animais = document.querySelector('#contato')
+const animais = document.querySelector('.animais-lista li:last-child')
+const animais = document.querySelector('[href^="https://"]')
+const animais = document.querySelector('ul')
+
+//Busca dentro do UL apenas
+const navItem = primeiroUl.querySelector('li')
+
