@@ -83,3 +83,28 @@ const animais = document.querySelector('ul')
 //Busca dentro do UL apenas
 const navItem = primeiroUl.querySelector('li')
 
+//SELETOR GERAL LISTA
+//querySelectorAll retornas todos os elementos compatíveis com o seletor CSS em uma NodeList
+const griSelection = document.querySelectorAll('.grid-section')
+const griSelection = document.querySelectorAll('ul')
+const griSelection = document.querySelectorAll('.titulo')
+const griSelection = document.querySelectorAll('.animais-lista img')
+
+//Retorna o segundo elementos
+console.log(gridSection[1])
+
+//Array-Like
+//HTMLCollection e NodeLIst são array-like, parecem uma array mas não são, O método de Array forEach() por exemplo, existe apenas no Nodelist
+const griSelection = document.querySelectorAll('.grid-section')
+gridSection.forEach(function(gridItem,index, array) {
+  gridItem.classList.add('azul')
+  console.log(index) //index do item na array
+  console.log(array) // a array completa
+})
+
+
+//EXERCICIOS
+//Retorne no console todas as imagens do site
+
+const imagens = document.querySelectorAll('img')
+console.log(imagens)
