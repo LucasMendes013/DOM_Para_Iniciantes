@@ -90,3 +90,49 @@ imgsAlt.forEach((img) => {
 //Modifique o href do link externo do menu
 const link = document.querySelector('a[href^="http"]')
 link.setAttribute('href', 'https://www.google.com/')
+
+
+const listaAnimais = document.querySelector('.animais-lista')
+
+const heigth = listaAnimais.scrollHeight
+const animaisTopo = listaAnimais.offsetTop
+console.log(animaisTopo)
+
+// let primeiroh2 = document.querySelector('h2')
+// const h2Left = primeiroh2.offsetLeft
+
+// console.log(h2Left)
+
+let rect = primeiroh2.getBoundingClientRect()
+console.log(rect.top)
+
+
+if(rect< 0) {
+  console.log('Passou do elemnto')
+}
+// console.log(
+//   window.innerHeight, //width da janela
+//   window.outerHeight, //soma dev tools tambem
+//   window.innerWidth,  //heigth da janela
+//   window.outerWidth,  //soma da barra de endereco
+//   window.pageYOffset, //distancia total do scroll horizontal
+//   window.pageXOffset  //distancia total do scroll vertical
+// )
+
+const small = window.matchMedia('(max-width: 600px)').matches
+if(small){
+  console.log('usuario mobile')
+} else {
+  console.log('usuario desktop')
+}
+
+//verifique a distancia da primeira imagem em relacao ao topo da pagina
+const iemige = document.querySelector('img')
+const iemigeResultado = iemige.offsetTop
+console.log(iemigeResultado)
+
+
+//Retorne a soma da largura de todas as imagens
+const todasImagens = document.querySelectorAll('img')
+const somaTodasImagens = todasImagens.matches
+console.log(somaTodasImagens)

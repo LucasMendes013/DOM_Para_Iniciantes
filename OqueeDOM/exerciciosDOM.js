@@ -182,3 +182,45 @@ animais.className = 'azul'  //substitui completamente a string
 animais.classList += 'vermelho' //adiciona vermelho à string
 
 animais.attributes = 'class="ativo' //não funciona, read-only
+
+//Height e Width
+//Estas são propriedades e métodos dos objetos Element e  HTMLElement, a maioria delas são Read Only
+const section = document.querySelector('.animais')
+
+section.clientHeight  //heigth + padding
+section.offsetHeight  //heigth + padding + border
+section.scrollHeight  //height total, mesmo dentro do scrool 
+
+//Mesma coisa para o Width, clientWidth
+
+
+//offsetTop e offsetLeft
+const section = document.querySelector('.animais')
+
+//distancia entre o topo do elemnto e o topo da página
+section.offsetTop
+
+//distancia entre o canto esquerdo do elemento 
+//e o canto esquerdo da página
+section.offsetLeft
+
+
+//getBoundingClientRect()
+//Método que retorna um objeto com valores de width, height, distancias do elmeento e mais
+
+const section = document.querySelector('.animais')
+
+const rect = section.getBoundingClientRect()
+rect.height
+rect.width
+rect.top      //distancia entre o topo do elemento e o scroll
+
+
+//MatchMedia()
+//Utilize um media-querie como no css para verificar a largura do browser
+const small = window.matchMedia('(max-width: 600px)')
+if(small.matches) {
+  console.log('tela menor que 600px')
+} else {
+  console.log('tela maior que 600px')
+}
