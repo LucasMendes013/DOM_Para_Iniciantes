@@ -133,6 +133,36 @@ console.log(iemigeResultado)
 
 
 //Retorne a soma da largura de todas as imagens
-const todasImagens = document.querySelectorAll('img')
-const somaTodasImagens = todasImagens.matches
-console.log(somaTodasImagens)
+function somaImagens(){
+  const todasImagens = document.querySelectorAll('img')
+  let soma = 0
+  todasImagens.forEach((imagem) => {
+    soma = soma + imagem.offsetWidth
+    console.log(imagem.offsetWidth)
+  })
+  console.log(soma)
+}
+
+// window.onload = function() {
+  somaImagens()
+}
+
+//Verifique se os links da pagina possuem (48px por 48px)
+const links = document.querySelectorAll('a')
+links.forEach((link) => {
+  const linkWidth = link.offsetWidth
+  const linkHeigth = link.offsetHeight
+  if(linkWidth >= 48 && linkHeigth >= 48) {
+    console.log(`${link} possue acessibilidade`)
+  } else {
+    console.log(`${link} não possue acessibilidade`)
+  }
+})
+
+//Se o browser for menor que 720px adicione a classe menu-mobile ao menu
+const browserSmall = window.matchMedia('(max-width: 720px)').matches
+if(browserSmall){
+  const menu = document.querySelector('.menu')
+  menu.classList.add('menu-mobile')
+}
+
