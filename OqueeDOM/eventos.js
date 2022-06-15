@@ -35,3 +35,19 @@ function callback(event) {
 }
 
 img.addEventListener('click', callback)
+
+//Diferentes eventos
+//Existem diversos eventos como os abaixo e até mais. Eventos podem ser adicionados a diferentes elementos, como o window e document também
+
+const h1 = document.querySelector('h1')
+
+function callback(event) {
+  console.log(event.type,event)
+
+}
+
+h1.addEventListener('click', callback)
+h1.addEventListener('mouseenter', callback)
+window.addEventListener('scroll', callback)
+window.addEventListener('resize', callback)
+window.addEventListener('keydown', callback)
